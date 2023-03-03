@@ -12,7 +12,7 @@
  * */
 void *arraylist_alloc(size_t type, size_t size);
 /*
- * arraylist_alloc:
+ * arraylist_push:
  * 	push back the value into the list
  * 	@param void *restrict ptr_to_list: a pointer to the list (I.e. &list)
  * 	@param void *restrict value: a pointer to the value
@@ -20,7 +20,7 @@ void *arraylist_alloc(size_t type, size_t size);
  * */
 _Bool arraylist_push(void *restrict ptr_to_list, const void *restrict value);
 /*
- * arraylist_alloc:
+ * arraylist_pop:
  * 	pop back the list into the dest
  * 	@param void *restrict list: the list
  * 	@param void *restrict value: a pointer to the dest
@@ -28,7 +28,7 @@ _Bool arraylist_push(void *restrict ptr_to_list, const void *restrict value);
  * */
 _Bool arraylist_pop(void *restrict list, void *restrict dest);
 /*
- * arraylist_alloc:
+ * arraylist_add:
  * 	similar to arraylist_push, but allow memory collision between the list and the value
  * 	@param void *ptr_to_list: a pointer to the list (I.e. &list)
  * 	@param void *value: a pointer to the value
@@ -36,7 +36,7 @@ _Bool arraylist_pop(void *restrict list, void *restrict dest);
  * */
 _Bool arraylist_add(void *ptr_to_list, const void *value);
 /*
- * arraylist_alloc:
+ * arraylist_delete:
  * 	similar to arraylist_pop, but allow memory collision between the list and the value
  * 	@param void *list: the list
  * 	@param void *value: a pointer to the dest
